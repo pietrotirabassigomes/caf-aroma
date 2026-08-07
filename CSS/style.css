@@ -1,0 +1,115 @@
+@import url("./color.css");
+@import url("./animation.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--off-white);
+    color: var(--cinza-escuro);
+    overflow-x: hidden;
+}
+
+header {
+    background: var(--marrom);
+    color: var(--branco);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--bege);
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background: var(--amarelo-claro);
+    background: linear-gradient(120deg, var(--bege), var(--marrom-claro) );;
+    background-size: 400% 400%;
+    animation: gradientBackground 10s linear infinite;
+}
+
+
+.texto-banner {
+    width: 50%;
+     position: relative;
+    animation-name: animacaoTexto;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;  
+}
+
+.texto-banner h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+     position: relative;
+    animation-name: animacaoTexto;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.texto-banner p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 28px;
+     position: relative;
+    animation-name: animacaoTexto;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.banner img {
+    width: 400px;
+    border-radius: 15px;
+
+    position: relative;
+    animation-name: minhaAnimacao;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+button {
+    background: var(--marrom-claro);
+    height: 40px;
+    width: 200px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
