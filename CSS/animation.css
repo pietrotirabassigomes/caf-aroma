@@ -17,3 +17,18 @@
   from {right: 200px;}
   to {right: 0px;}
 }
+@keyframes animacaoCards {
+  from {bottom: -200px;}
+  to {bottom: 0px;}
+}
+@keyframes flutuar {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px); /* Moves up */
+  }
+  100% {
+    transform: translateY(0px); /* Returns to start */
+  }
+}
