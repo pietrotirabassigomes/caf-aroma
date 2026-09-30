@@ -1,0 +1,291 @@
+@import url("./color.css");
+@import url("./animation.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--off-white);
+    color: var(--cinza-escuro);
+    overflow-x: hidden;
+}
+
+header {
+    background: var(--marrom);
+    color: var(--branco);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--bege);
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background: var(--amarelo-claro);
+    background: linear-gradient(120deg, var(--bege), var(--marrom-claro) );;
+    background-size: 400% 400%;
+    animation: gradientBackground 10s linear infinite;
+}
+
+
+.texto-banner {
+    width: 50%;
+     position: relative;
+    animation-name: animacaoTexto;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;  
+}
+
+.texto-banner h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+     position: relative;
+    animation-name: animacaoTexto;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.texto-banner p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 28px;
+     position: relative;
+    animation-name: animacaoTexto;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.banner img {
+    width: 400px;
+    border-radius: 15px;
+
+    position: relative;
+    animation-name: minhaAnimacao;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+button {
+    background: var(--marrom-claro);
+    height: 40px;
+    width: 200px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.titulo {
+  text-align: center;
+  margin: 50px 0px;
+  font-size: 34px;
+  animation: flutuar 8s ease-in-out infinite; 
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+.card { 
+  width: 200px; 
+  background: white; 
+  border-radius: 12px; 
+  overflow: hidden; 
+  text-align: center; 
+  padding-bottom: 20px; 
+  cursor: pointer; 
+  transition: 0.3s; 
+} 
+
+.card:hover { 
+  transform: translateY(-7px); 
+}
+.card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+.card h3{
+    margin: 20px 10px;
+}
+.card p{
+    padding: 0 20px;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+#cardsetitulo{
+    position: relative;
+    animation-name: animacaoCards;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+footer{
+    background-color: var(--marrom);
+    height: 200px;
+    
+}
+footer h3{
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;;
+    text-align: center;
+    padding-top: 40px;
+}
+footer p{
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;;
+    text-align: center;
+    padding-top: 20px;
+}
+/* Cardápio: grade responsiva de cards */
+#container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 30px;
+}
+
+/* Mensagem "Carregando..." ou de erro ocupa a linha toda */
+#container-cards > p {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+#container-cards .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+#container-cards .card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+#container-cards .card img {
+    height: 200px;
+}
+
+#container-cards .card:hover img {
+    transform: scale(1.06);
+}
+
+/* O texto ocupa o espaço livre, então todos os botões ficam alinhados embaixo */
+#container-cards .card p {
+    flex-grow: 1;
+}
+
+#container-cards .card button {
+    align-self: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#container-cards .card button:hover {
+    background: var(--marrom);
+}
+/* ===== Loja (produtos.html) ===== */
+#container-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 30px;
+}
+
+#container-produtos > p {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+#container-produtos .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+#container-produtos .card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+#container-produtos .card img {
+    height: 220px;
+}
+
+#container-produtos .card:hover img {
+    transform: scale(1.06);
+}
+
+#container-produtos .card h3 {
+    margin: 18px 10px 10px;
+}
+
+/* descrição ocupa o espaço livre: preço e botão ficam alinhados embaixo */
+#container-produtos .card p {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+#container-produtos .card .preco {
+    flex-grow: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--marrom);
+    margin: 0 0 15px;
+}
+
+#container-produtos .card button {
+    align-self: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#container-produtos .card button:hover {
+    background: var(--marrom);
+}
